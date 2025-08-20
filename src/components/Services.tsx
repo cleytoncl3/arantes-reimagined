@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Package, FileText, Printer, Gift } from "lucide-react";
 import kraftPaper from "@/assets/kraft-paper.jpg";
 import customBags from "@/assets/custom-bags.jpg";
@@ -157,7 +158,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section id="plotter" className="py-20">
+      <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -180,9 +181,70 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full">
-                  Saiba Mais
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      Saiba Mais
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center gap-3">
+                        <Printer className="h-6 w-6 text-secondary" />
+                        Serviços de Plotter
+                      </DialogTitle>
+                      <DialogDescription>
+                        Papéis especiais para impressão em plotter com qualidade profissional
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Tipos de Papel Disponíveis:</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span>Papel bond 75g/m² - ideal para desenhos técnicos</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span>Papel vegetal 90g/m² - transparente para sobreposições</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span>Papel fotográfico - para impressões de alta qualidade</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span>Papel para CAD - resistente e durável</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Formatos Disponíveis:</h4>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">A0 - 841 x 1189mm</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">A1 - 594 x 841mm</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">A2 - 420 x 594mm</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Medidas personalizadas</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-secondary/10 p-4 rounded-lg">
+                        <p className="text-sm">
+                          <strong>Aplicações:</strong> Projetos arquitetônicos, plantas baixas, mapas, 
+                          desenhos técnicos, impressões fotográficas de grande formato e muito mais.
+                        </p>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </CardContent>
             </Card>
 
@@ -197,9 +259,72 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full">
-                  Saiba Mais
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      Saiba Mais
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center gap-3">
+                        <Gift className="h-6 w-6 text-accent" />
+                        Embrulho de Balcão
+                      </DialogTitle>
+                      <DialogDescription>
+                        Materiais práticos e elegantes para embrulho no seu estabelecimento
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Produtos Disponíveis:</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full"></div>
+                            <span>Papel kraft liso em bobinas - 60cm, 80cm e 100cm</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full"></div>
+                            <span>Papel kraft colorido - diversas cores disponíveis</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full"></div>
+                            <span>Papel crepom - textura especial para presentes</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full"></div>
+                            <span>Papel contact transparente - proteção e acabamento</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full"></div>
+                            <span>Fitas decorativas - laços e acabamentos</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Características:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Resistente</p>
+                            <p className="text-sm text-muted-foreground">Suporta produtos pesados</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Versátil</p>
+                            <p className="text-sm text-muted-foreground">Para diversos tipos de produto</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Econômico</p>
+                            <p className="text-sm text-muted-foreground">Ótimo custo-benefício</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Sustentável</p>
+                            <p className="text-sm text-muted-foreground">Material reciclável</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </CardContent>
             </Card>
 
@@ -214,9 +339,83 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full">
-                  Agendar Consulta
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      Saiba Mais
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center gap-3">
+                        <Package className="h-6 w-6 text-primary" />
+                        Consultoria Especializada
+                      </DialogTitle>
+                      <DialogDescription>
+                        Orientação profissional para escolher as melhores soluções em embalagens
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Nossos Serviços de Consultoria:</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            <span>Análise das necessidades do seu negócio</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            <span>Seleção de materiais adequados por tipo de produto</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            <span>Otimização de custos sem perder qualidade</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            <span>Soluções sustentáveis e eco-friendly</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            <span>Desenvolvimento de embalagens personalizadas</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Como Funciona:</h4>
+                        <div className="space-y-3">
+                          <div className="flex gap-3">
+                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                            <div>
+                              <p className="font-medium">Análise Inicial</p>
+                              <p className="text-sm text-muted-foreground">Entendemos seu negócio e necessidades</p>
+                            </div>
+                          </div>
+                          <div className="flex gap-3">
+                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                            <div>
+                              <p className="font-medium">Proposta Personalizada</p>
+                              <p className="text-sm text-muted-foreground">Apresentamos soluções sob medida</p>
+                            </div>
+                          </div>
+                          <div className="flex gap-3">
+                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                            <div>
+                              <p className="font-medium">Implementação</p>
+                              <p className="text-sm text-muted-foreground">Acompanhamos todo o processo</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-primary/10 p-4 rounded-lg">
+                        <p className="text-sm">
+                          <strong>Agende uma consulta gratuita</strong> e descubra como podemos 
+                          ajudar a melhorar suas soluções de embalagem com mais de 30 anos de experiência no mercado.
+                        </p>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </CardContent>
             </Card>
           </div>
