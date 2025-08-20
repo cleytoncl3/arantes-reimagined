@@ -36,11 +36,18 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-primary">
-                ARANTES PAPÉIS & APAPÉIS
-              </h1>
-              <p className="text-sm text-muted-foreground">Embalagens e Soluções</p>
+            <div className="flex-shrink-0 flex items-center gap-4">
+              <img 
+                src="/lovable-uploads/764af33d-e5e4-4bbe-a25b-75fa9c6aff19.png" 
+                alt="Arantes Papéis Logo" 
+                className="h-12 w-12 object-contain"
+              />
+              <div>
+                <h1 className="text-2xl font-bold text-primary">
+                  ARANTES PAPÉIS & APAPÉIS
+                </h1>
+                <p className="text-sm text-muted-foreground">Embalagens e Soluções</p>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

@@ -7,7 +7,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">ARANTES PAPÉIS & APAPÉIS</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <img 
+                src="/lovable-uploads/764af33d-e5e4-4bbe-a25b-75fa9c6aff19.png" 
+                alt="Arantes Papéis Logo" 
+                className="h-12 w-12 object-contain"
+              />
+              <div>
+                <h3 className="text-2xl font-bold">ARANTES PAPÉIS & APAPÉIS</h3>
+                <p className="text-sm text-primary-foreground/70">
+                  CNPJ: 47.821.127/0001-35
+                </p>
+              </div>
+            </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
               Especialistas em papéis kraft, bolsas personalizadas e soluções completas 
               para embalagens há mais de 10 anos no mercado.
@@ -73,7 +85,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/80">
-            © 2024 Arantes Papéis & Apapéis. Todos os direitos reservados.
+            © {new Date().getFullYear()} Arantes Papéis & Apapéis. Todos os direitos reservados.
           </p>
         </div>
       </div>
