@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#papers" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Papéis
+                  Papéis Kraft
                 </a>
               </li>
               <li>

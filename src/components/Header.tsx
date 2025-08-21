@@ -7,9 +7,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Início", href: "#home" },
-    { name: "Papéis", href: "#papers" },
+    { name: "Papéis Kraft", href: "#papers" },
     { name: "Bolsas", href: "#bags" },
-    { name: "Saiba Mais", href: "#services" },
+    { name: "Linha de Papéis", href: "#services" },
     { name: "Contato", href: "#contact" },
   ];
 
@@ -40,7 +40,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/c6b97b98-8817-4bd3-8fa9-f094a25b4e17.png" 
                 alt="Arantes Papéis Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-16 w-16 object-contain"
               />
               <div>
                 <h1 className="text-2xl font-bold text-primary">
