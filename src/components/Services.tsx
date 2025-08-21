@@ -1,9 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Package, FileText, Printer, Gift } from "lucide-react";
+import { Package, FileText, Scroll, Gift, Car } from "lucide-react";
 import kraftPaper from "@/assets/kraft-paper.jpg";
 import customBags from "@/assets/custom-bags.jpg";
+import plotterPaper from "@/assets/plotter-paper-roll.jpg";
+import counterWrapping from "@/assets/counter-wrapping.jpg";
+import automotiveMasking from "@/assets/automotive-masking-paper.jpg";
 
 const Services = () => {
   const paperSpecs = [
@@ -111,7 +114,7 @@ const Services = () => {
                       <p className="text-sm text-muted-foreground">Sob medida</p>
                     </div>
                     <div className="text-center p-4 bg-muted/50 rounded-lg">
-                      <Printer className="h-8 w-8 text-primary mx-auto mb-2" />
+                      <FileText className="h-8 w-8 text-primary mx-auto mb-2" />
                       <p className="font-semibold">Impressão Personalizada</p>
                       <p className="text-sm text-muted-foreground">Sua marca</p>
                     </div>
@@ -162,10 +165,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Serviços Adicionais
+              Linha de Papéis
             </h2>
             <p className="text-xl text-muted-foreground">
-              Soluções completas para todas as suas necessidades de embalagem
+              Soluções especializadas em papéis para diversas aplicações
             </p>
           </div>
 
@@ -173,7 +176,7 @@ const Services = () => {
             <Card className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Printer className="h-8 w-8 text-secondary" />
+                  <Scroll className="h-8 w-8 text-secondary" />
                 </div>
                 <CardTitle className="text-xl">Plotter</CardTitle>
                 <CardDescription>
@@ -181,6 +184,13 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                <div className="mb-4">
+                  <img 
+                    src={plotterPaper} 
+                    alt="Bobina de papel para plotter" 
+                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                  />
+                </div>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="outline" className="w-full">
@@ -190,7 +200,7 @@ const Services = () => {
                   <DialogContent className="max-w-2xl">
                     <DialogHeader>
                       <DialogTitle className="flex items-center gap-3">
-                        <Printer className="h-6 w-6 text-secondary" />
+                        <Scroll className="h-6 w-6 text-secondary" />
                         Serviços de Plotter
                       </DialogTitle>
                       <DialogDescription>
@@ -259,6 +269,13 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                <div className="mb-4">
+                  <img 
+                    src={counterWrapping} 
+                    alt="Embrulho de balcão" 
+                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                  />
+                </div>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="outline" className="w-full">
@@ -331,14 +348,21 @@ const Services = () => {
             <Card className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Package className="h-8 w-8 text-primary" />
+                  <Car className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Consultoria</CardTitle>
+                <CardTitle className="text-xl">Papel de Mascaramento Automotivo</CardTitle>
                 <CardDescription>
-                  Ajudamos você a escolher a melhor solução
+                  Proteção profissional para pintura automotiva
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                <div className="mb-4">
+                  <img 
+                    src={automotiveMasking} 
+                    alt="Papel de mascaramento automotivo" 
+                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                  />
+                </div>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="outline" className="w-full">
@@ -348,69 +372,60 @@ const Services = () => {
                   <DialogContent className="max-w-2xl">
                     <DialogHeader>
                       <DialogTitle className="flex items-center gap-3">
-                        <Package className="h-6 w-6 text-primary" />
-                        Consultoria Especializada
+                        <Car className="h-6 w-6 text-primary" />
+                        Papel de Mascaramento Automotivo
                       </DialogTitle>
                       <DialogDescription>
-                        Orientação profissional para escolher as melhores soluções em embalagens
+                        Papéis especializados para proteção em pintura automotiva
                       </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-primary mb-2">Nossos Serviços de Consultoria:</h4>
+                        <h4 className="font-semibold text-primary mb-2">Tipos de Papel Disponíveis:</h4>
                         <ul className="space-y-2">
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Análise das necessidades do seu negócio</span>
+                            <span>Papel mascaramento azul - resistente a solventes</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Seleção de materiais adequados por tipo de produto</span>
+                            <span>Papel mascaramento marrom - alta aderência</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Otimização de custos sem perder qualidade</span>
+                            <span>Papel mascaramento verde - fácil remoção</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Soluções sustentáveis e eco-friendly</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Desenvolvimento de embalagens personalizadas</span>
+                            <span>Papel mascaramento fino - detalhes precisos</span>
                           </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary mb-2">Como Funciona:</h4>
-                        <div className="space-y-3">
-                          <div className="flex gap-3">
-                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">1</div>
-                            <div>
-                              <p className="font-medium">Análise Inicial</p>
-                              <p className="text-sm text-muted-foreground">Entendemos seu negócio e necessidades</p>
-                            </div>
+                        <h4 className="font-semibold text-primary mb-2">Características:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Resistente a Tinta</p>
+                            <p className="text-sm text-muted-foreground">Não permite vazamentos</p>
                           </div>
-                          <div className="flex gap-3">
-                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">2</div>
-                            <div>
-                              <p className="font-medium">Proposta Personalizada</p>
-                              <p className="text-sm text-muted-foreground">Apresentamos soluções sob medida</p>
-                            </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Fácil Remoção</p>
+                            <p className="text-sm text-muted-foreground">Não deixa resíduos</p>
                           </div>
-                          <div className="flex gap-3">
-                            <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">3</div>
-                            <div>
-                              <p className="font-medium">Implementação</p>
-                              <p className="text-sm text-muted-foreground">Acompanhamos todo o processo</p>
-                            </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Alta Temperatura</p>
+                            <p className="text-sm text-muted-foreground">Resistente ao calor</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="font-medium">Versatilidade</p>
+                            <p className="text-sm text-muted-foreground">Múltiplas aplicações</p>
                           </div>
                         </div>
                       </div>
                       <div className="bg-primary/10 p-4 rounded-lg">
                         <p className="text-sm">
-                          <strong>Agende uma consulta gratuita</strong> e descubra como podemos 
-                          ajudar a melhorar suas soluções de embalagem com mais de 30 anos de experiência no mercado.
+                          <strong>Aplicações:</strong> Pintura automotiva, mascaramento de peças, 
+                          proteção durante acabamentos, repintura e restauração de veículos.
                         </p>
                       </div>
                     </div>
