@@ -158,7 +158,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section id="services" className="py-20">
+      <section id="services" className="py-32 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-foreground mb-4">
