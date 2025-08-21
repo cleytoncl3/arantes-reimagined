@@ -40,7 +40,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/c6b97b98-8817-4bd3-8fa9-f094a25b4e17.png" 
                 alt="Arantes Papéis Logo" 
-                className="h-16 w-16 object-contain"
+                className="h-20 w-20 object-contain"
               />
               <div>
                 <h1 className="text-2xl font-bold text-primary">
