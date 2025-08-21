@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-4 mb-4">
               <img 
-                src="/lovable-uploads/764af33d-e5e4-4bbe-a25b-75fa9c6aff19.png" 
+                src="/lovable-uploads/c6b97b98-8817-4bd3-8fa9-f094a25b4e17.png" 
                 alt="Arantes Papéis Logo" 
                 className="h-12 w-12 object-contain"
               />

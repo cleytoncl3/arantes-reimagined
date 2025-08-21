@@ -1,6 +1,6 @@
 import { ArrowRight, Package, Truck, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBags from "@/assets/hero-bags.jpg";
+// Background image will be used directly from uploads
 
 const Hero = () => {
   return (
@@ -8,9 +8,9 @@ const Hero = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBags})` }}
+        style={{ backgroundImage: `url(/lovable-uploads/7f008e3a-fd51-4e59-97bc-242eee2ce529.png)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div>
       </div>
 
       {/* Content */}
