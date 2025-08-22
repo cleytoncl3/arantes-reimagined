@@ -174,21 +174,18 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Scroll className="h-8 w-8 text-secondary" />
-                </div>
+              <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">Plotter</CardTitle>
                 <CardDescription>
                   Papéis para plotter em várias medidas
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="mb-4">
+                <div className="mb-6">
                   <img 
                     src={plotterPaper} 
                     alt="Bobina de papel para plotter" 
-                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                    className="w-full h-48 object-cover rounded-lg shadow-soft"
                   />
                 </div>
                 <Dialog>
@@ -259,21 +256,18 @@ const Services = () => {
             </Card>
 
             <Card className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Gift className="h-8 w-8 text-accent" />
-                </div>
+              <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">Embrulho de Balcão</CardTitle>
                 <CardDescription>
                   Soluções práticas para o dia a dia
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="mb-4">
+                <div className="mb-6">
                   <img 
                     src={counterWrapping} 
                     alt="Embrulho de balcão" 
-                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                    className="w-full h-48 object-cover rounded-lg shadow-soft"
                   />
                 </div>
                 <Dialog>
@@ -346,21 +340,18 @@ const Services = () => {
             </Card>
 
             <Card className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Car className="h-8 w-8 text-primary" />
-                </div>
+              <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">Papel de Mascaramento Automotivo</CardTitle>
                 <CardDescription>
                   Proteção profissional para pintura automotiva
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="mb-4">
+                <div className="mb-6">
                   <img 
                     src={automotiveMasking} 
                     alt="Papel de mascaramento automotivo" 
-                    className="w-full h-32 object-cover rounded-lg shadow-soft"
+                    className="w-full h-48 object-cover rounded-lg shadow-soft"
                   />
                 </div>
                 <Dialog>
