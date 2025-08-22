@@ -125,7 +125,7 @@ const Services = () => {
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span>Material reciclado ou virgem</span>
+                        <span>Material reciclado</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>

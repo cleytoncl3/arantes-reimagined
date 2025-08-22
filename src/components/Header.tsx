@@ -8,7 +8,7 @@ const Header = () => {
   const navItems = [
     { name: "Início", href: "#home" },
     { name: "Papéis Kraft", href: "#papers" },
-    { name: "Bolsas", href: "#bags" },
+    { name: "Filme Plástico", href: "#plastic-film" },
     { name: "Linha de Papéis", href: "#services" },
     { name: "Contato", href: "#contact" },
   ];
