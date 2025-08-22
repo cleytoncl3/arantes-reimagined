@@ -71,8 +71,10 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="hero" className="mt-6 w-full">
-                    Solicitar Orçamento
+                  <Button variant="hero" className="mt-6 w-full" asChild>
+                    <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                      Solicitar Orçamento
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -142,8 +144,10 @@ const Services = () => {
                     </ul>
                   </div>
                   
-                  <Button variant="accent" className="w-full">
-                    Solicitar Orçamento Filme
+                  <Button variant="accent" className="w-full" asChild>
+                    <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                      Solicitar Orçamento Filme
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

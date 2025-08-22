@@ -21,7 +21,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>(20) 99606-2282</span>
+              <span>(21) 99606-2282</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
@@ -61,8 +61,10 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="hero" size="sm">
-                Orçamento
+              <Button variant="hero" size="sm" asChild>
+                <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                  Orçamento
+                </a>
               </Button>
             </nav>
 
@@ -93,8 +95,10 @@ const Header = () => {
                     {item.name}
                   </a>
                 ))}
-                <Button variant="hero" size="sm" className="mt-4 w-fit">
-                  Orçamento
+                <Button variant="hero" size="sm" className="mt-4 w-fit" asChild>
+                  <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                    Orçamento
+                  </a>
                 </Button>
               </div>
             </nav>

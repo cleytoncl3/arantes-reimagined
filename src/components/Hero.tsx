@@ -28,12 +28,16 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up">
-            <Button variant="accent" size="xl" className="group">
-              Ver Nossos Produtos
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="accent" size="xl" className="group" asChild>
+              <a href="/produtos">
+                Ver Nossos Produtos
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-              Entre em Contato
+            <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+              <a href="#contact">
+                Entre em Contato
+              </a>
             </Button>
           </div>
 

@@ -116,9 +116,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full">
-                  Enviar Solicitação
-                  <Send className="ml-2 h-5 w-5" />
+                <Button variant="hero" size="lg" className="w-full" asChild>
+                  <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                    Enviar Solicitação
+                  </a>
                 </Button>
               </form>
             </CardContent>
@@ -138,7 +139,7 @@ const Contact = () => {
                       Ligue para nós ou envie um WhatsApp
                     </p>
                     <p className="font-medium text-primary text-lg">
-                      (20) 99606-2282
+                      (21) 99606-2282
                     </p>
                   </div>
                 </div>
@@ -191,9 +192,11 @@ const Contact = () => {
                 <p className="mb-4 text-white/90">
                   Para pedidos urgentes, ligue diretamente
                 </p>
-                <Button variant="outline" className="bg-white/20 border-white/30 text-white hover:bg-white/30">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Ligar Agora
+                <Button variant="outline" className="bg-white/20 border-white/30 text-white hover:bg-white/30" asChild>
+                  <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Ligar Agora
+                  </a>
                 </Button>
               </CardContent>
             </Card>
