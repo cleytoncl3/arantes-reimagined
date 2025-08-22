@@ -1,9 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Package, FileText, Scroll, Gift, Car } from "lucide-react";
+import { Package, FileText, Scroll, Gift, Car, Film } from "lucide-react";
 import kraftPaper from "@/assets/kraft-paper.jpg";
-import customBags from "@/assets/custom-bags.jpg";
+import plasticFilm from "@/assets/plastic-film-cutting.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
 import automotiveMasking from "@/assets/automotive-masking-paper.jpg";
@@ -81,16 +81,16 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Custom Bags Section */}
-      <section id="bags" className="py-20 bg-muted/30">
+      {/* Plastic Film Section */}
+      <section id="plastic-film" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Bolsas Personalizadas
+              Filme Plástico para Máquinas de Corte
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Criamos bolsas exclusivas para sua marca, com design personalizado 
-              e materiais de alta qualidade que valorizam seus produtos.
+              Filmes especiais para máquinas de corte têxtil, com características técnicas 
+              para garantir precisão e proteção durante o processo industrial.
             </p>
           </div>
 
@@ -99,24 +99,24 @@ const Services = () => {
               <Card className="shadow-medium border-0 bg-card">
                 <CardHeader>
                   <CardTitle className="text-2xl text-primary flex items-center gap-3">
-                    <Gift className="h-8 w-8" />
-                    Bolsas Premium
+                    <Film className="h-8 w-8" />
+                    Filme Industrial
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Soluções personalizadas para presentes e varejo
+                    Proteção e precisão para máquinas de corte
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-muted/50 rounded-lg">
                       <Package className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="font-semibold">Diversos Tamanhos</p>
-                      <p className="text-sm text-muted-foreground">Sob medida</p>
+                      <p className="font-semibold">Múltiplas Aplicações</p>
+                      <p className="text-sm text-muted-foreground">Várias máquinas</p>
                     </div>
                     <div className="text-center p-4 bg-muted/50 rounded-lg">
                       <FileText className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="font-semibold">Impressão Personalizada</p>
-                      <p className="text-sm text-muted-foreground">Sua marca</p>
+                      <p className="font-semibold">Alta Resistência</p>
+                      <p className="text-sm text-muted-foreground">Controle de tração</p>
                     </div>
                   </div>
                   
@@ -125,25 +125,25 @@ const Services = () => {
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span>Alças resistentes e confortáveis</span>
+                        <span>Material reciclado ou virgem</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span>Papel kraft de alta gramatura</span>
+                        <span>Baixa densidade ou alta densidade</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span>Impressão em cores vibrantes</span>
+                        <span>Proteção contra sujeiras e bactérias</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span>Acabamento premium</span>
+                        <span>Resistente a rasgos e água</span>
                       </li>
                     </ul>
                   </div>
                   
                   <Button variant="accent" className="w-full">
-                    Criar Bolsa Personalizada
+                    Solicitar Orçamento Filme
                   </Button>
                 </CardContent>
               </Card>
@@ -151,8 +151,8 @@ const Services = () => {
             
             <div className="animate-slide-up order-1 lg:order-2">
               <img 
-                src={customBags} 
-                alt="Bolsas personalizadas" 
+                src={plasticFilm} 
+                alt="Filme plástico para máquinas de corte" 
                 className="w-full h-96 object-cover rounded-2xl shadow-medium"
               />
             </div>
