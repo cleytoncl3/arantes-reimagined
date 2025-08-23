@@ -3,8 +3,44 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch("https://formsubmit.co/cleytoncl2@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Retornaremos seu contato em breve. Obrigado!",
+        });
+        e.currentTarget.reset();
+      } else {
+        throw new Error("Erro no envio");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro no envio",
+        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 paper-texture">
@@ -32,12 +68,11 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form action="https://formsubmit.co/cleytoncl2@gmail.com" method="POST" className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* FormSubmit.co configuration */}
                 <input type="hidden" name="_subject" value="Nova solicitação de orçamento - Arantes Papéis" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://c543081c-ccab-4c75-a5a3-46357bf72e5f.sandbox.lovable.dev/?submitted=true" />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -124,9 +159,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
+                <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isLoading}>
                   <Send className="mr-2 h-4 w-4" />
-                  Enviar Solicitação
+                  {isLoading ? "Enviando..." : "Enviar Solicitação"}
                 </Button>
               </form>
             </CardContent>
