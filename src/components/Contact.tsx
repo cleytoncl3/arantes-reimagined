@@ -5,10 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-  };
 
   return (
     <section id="contact" className="py-20 paper-texture">
@@ -36,7 +32,13 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form action="https://formsubmit.co/cleytoncl2@gmail.com" method="POST" className="space-y-6">
+                {/* FormSubmit.co configuration */}
+                <input type="hidden" name="_subject" value="Nova solicitação de orçamento - Arantes Papéis" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://c543081c-ccab-4c75-a5a3-46357bf72e5f.sandbox.lovable.dev/?submitted=true" />
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -44,6 +46,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="name" 
+                      name="name"
                       required 
                       className="w-full" 
                       placeholder="Seu nome completo"
@@ -55,6 +58,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="company" 
+                      name="company"
                       className="w-full" 
                       placeholder="Nome da empresa"
                     />
@@ -68,6 +72,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="email" 
+                      name="email"
                       type="email" 
                       required 
                       className="w-full" 
@@ -80,9 +85,10 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="phone" 
+                      name="phone"
                       required 
                       className="w-full" 
-                      placeholder="(11) 99999-9999"
+                      placeholder="(21) 99999-9999"
                     />
                   </div>
                 </div>
@@ -93,6 +99,7 @@ const Contact = () => {
                   </label>
                   <select 
                     id="product" 
+                    name="product"
                     className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
                   >
                     <option value="">Selecione um produto</option>
@@ -110,16 +117,16 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     id="message" 
+                    name="message"
                     required 
                     className="w-full h-32" 
                     placeholder="Descreva suas necessidades, quantidade, especificações..."
                   />
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full" asChild>
-                  <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
-                    Enviar Solicitação
-                  </a>
+                <Button type="submit" variant="hero" size="lg" className="w-full">
+                  <Send className="mr-2 h-4 w-4" />
+                  Enviar Solicitação
                 </Button>
               </form>
             </CardContent>
