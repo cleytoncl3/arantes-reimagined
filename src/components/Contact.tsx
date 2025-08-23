@@ -14,31 +14,78 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Create a hidden iframe to handle the form submission
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'form-iframe';
+    document.body.appendChild(iframe);
+    
+    // Create a hidden form to submit to FormSubmit.co
+    const hiddenForm = document.createElement('form');
+    hiddenForm.method = 'POST';
+    hiddenForm.action = 'https://formsubmit.co/cleytoncl2@gmail.com';
+    hiddenForm.target = 'form-iframe'; // Submit to the hidden iframe
+    hiddenForm.style.display = 'none';
+    
+    // Add all form data to hidden form
+    formData.forEach((value, key) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value.toString();
+      hiddenForm.appendChild(input);
+    });
+    
+    // Add FormSubmit.co configuration
+    const configs = [
+      { name: '_subject', value: 'Nova solicitação de orçamento - Arantes Papéis' },
+      { name: '_captcha', value: 'false' },
+      { name: '_template', value: 'table' },
+      { name: '_autoresponse', value: 'Obrigado! Recebemos sua solicitação e retornaremos em breve.' }
+    ];
+    
+    configs.forEach(config => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = config.name;
+      input.value = config.value;
+      hiddenForm.appendChild(input);
+    });
+    
+    document.body.appendChild(hiddenForm);
     
     try {
-      const response = await fetch("https://formsubmit.co/cleytoncl2@gmail.com", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
+      // Submit the hidden form to the iframe
+      hiddenForm.submit();
+      
+      // Show success message and reset form
+      setTimeout(() => {
         toast({
           title: "Mensagem enviada com sucesso!",
           description: "Retornaremos seu contato em breve. Obrigado!",
         });
-        e.currentTarget.reset();
-      } else {
-        throw new Error("Erro no envio");
-      }
+        form.reset();
+        setIsLoading(false);
+        
+        // Clean up
+        document.body.removeChild(hiddenForm);
+        document.body.removeChild(iframe);
+      }, 1000);
+      
     } catch (error) {
       toast({
         title: "Erro no envio",
         description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
         variant: "destructive",
       });
-    } finally {
       setIsLoading(false);
+      
+      // Clean up
+      document.body.removeChild(hiddenForm);
+      document.body.removeChild(iframe);
     }
   };
 
@@ -69,11 +116,6 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* FormSubmit.co configuration */}
-                <input type="hidden" name="_subject" value="Nova solicitação de orçamento - Arantes Papéis" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
