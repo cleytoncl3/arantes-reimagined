@@ -1,5 +1,6 @@
 import { ArrowRight, Package, Truck, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 // Background image will be used directly from uploads
 
 const Hero = () => {
@@ -22,17 +23,17 @@ const Hero = () => {
               <span className="block text-accent">Encantam</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-              Especialistas em papéis kraft, bolsas personalizadas e soluções completas para embalagens. 
+              Especialistas em papéis kraft, e muitos outros tipos de papéis, verifique nosso catálogo. 
               Qualidade premium para seu negócio.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up">
             <Button variant="accent" size="xl" className="group" asChild>
-              <a href="/produtos">
+              <Link to="/produtos">
                 Ver Nossos Produtos
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
               <a href="#contact">
