@@ -274,7 +274,7 @@ const Contact = () => {
               <CardContent className="p-6 text-center">
                 <h3 className="font-bold text-xl mb-2">Precisa de Urgência?</h3>
                 <p className="mb-4 text-white/90">
-                  Para pedidos urgentes, ligue diretamente
+                  Para pedidos urgentes, fale com nosso time direto no whatsapp
                 </p>
                 <Button variant="outline" className="bg-white/20 border-white/30 text-white hover:bg-white/30" asChild>
                   <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">

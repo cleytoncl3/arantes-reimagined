@@ -11,7 +11,7 @@ import kraftPaper from "@/assets/kraft-paper.jpg";
 import customBags from "@/assets/custom-bags.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
-import automotiveMasking from "@/assets/automotive-masking-paper.jpg";
+import automotiveMasking from "@/assets/automotive-masking-paper-new.jpg";
 import plasticFilm from "@/assets/plastic-film-cutting.jpg";
 
 const Products = () => {
