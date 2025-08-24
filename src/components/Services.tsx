@@ -6,7 +6,7 @@ import kraftPaper from "@/assets/kraft-paper.jpg";
 import plasticFilm from "@/assets/plastic-film-cutting.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
-import automotiveMasking from "@/assets/automotive-masking-corrected.jpg";
+import automotiveMasking from "/lovable-uploads/4808232a-407c-4f4b-8470-bb67fee34280.png";
 import heroBackground from "@/assets/hero-background-improved.jpg";
 
 const Services = () => {
@@ -348,7 +348,7 @@ const Services = () => {
               <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">Papel de Mascaramento Automotivo</CardTitle>
                 <CardDescription>
-                  Proteção profissional para pintura automotiva
+                  Proteção profissional para pintura automotiva e muito mais.
                 </CardDescription>
               </CardHeader>
               <CardContent>

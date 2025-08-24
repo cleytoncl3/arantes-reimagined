@@ -11,7 +11,7 @@ import kraftPaper from "@/assets/kraft-paper.jpg";
 import customBags from "@/assets/custom-bags.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
-import automotiveMasking from "@/assets/automotive-masking-corrected.jpg";
+import automotiveMasking from "/lovable-uploads/4808232a-407c-4f4b-8470-bb67fee34280.png";
 import plasticFilm from "@/assets/plastic-film-cutting.jpg";
 
 const Products = () => {
@@ -71,7 +71,7 @@ const Products = () => {
     {
       id: 5,
       name: "Papel de Mascaramento Automotivo",
-      description: "Papel especializado para proteção em pintura automotiva",
+      description: "Proteção profissional para pintura automotiva e muito mais.",
       image: automotiveMasking,
       category: "Especializado",
       features: [
