@@ -372,28 +372,28 @@ const Services = () => {
                         Papel de Mascaramento Automotivo
                       </DialogTitle>
                       <DialogDescription>
-                        Papéis especializados para proteção em pintura automotiva
+                        Papel semi kraft de cor parda para proteção e múltiplas aplicações
                       </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-primary mb-2">Tipos de Papel Disponíveis:</h4>
+                        <h4 className="font-semibold text-primary mb-2">Usos Mais Comuns:</h4>
                         <ul className="space-y-2">
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Papel mascaramento azul - resistente a solventes</span>
+                            <span>Proteger pisos e móveis durante reformas e construções</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Papel mascaramento marrom - alta aderência</span>
+                            <span>Embalar itens para transporte seguro</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Papel mascaramento verde - fácil remoção</span>
+                            <span>Proteger superfícies na indústria moveleira</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span>Papel mascaramento fino - detalhes precisos</span>
+                            <span>Forração em diversas aplicações</span>
                           </li>
                         </ul>
                       </div>
@@ -420,8 +420,8 @@ const Services = () => {
                       </div>
                       <div className="bg-primary/10 p-4 rounded-lg">
                         <p className="text-sm">
-                          <strong>Aplicações:</strong> Pintura automotiva, mascaramento de peças, 
-                          proteção durante acabamentos, repintura e restauração de veículos.
+                          <strong>Aplicações:</strong> Proteção durante reformas, embalagem para transporte, 
+                          proteção de superfícies, forração e pintura automotiva.
                         </p>
                       </div>
                     </div>
