@@ -23,7 +23,7 @@ const Hero = () => {
               <span className="block text-accent">Encantam</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-              Especialistas em papéis kraft, e muitos outros tipos de papéis, verifique nosso catálogo. 
+              Especialistas em papéis kraft, e muitos outros tipos de papéis, soluções completas para embalagens. Verifique nosso catálogo. 
               Qualidade premium para seu negócio.
             </p>
           </div>

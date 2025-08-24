@@ -1,16 +1,20 @@
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const navItems = [
-    { name: "Início", href: "#home" },
-    { name: "Papéis Kraft", href: "#papers" },
-    { name: "Filme Plástico", href: "#plastic-film" },
-    { name: "Linha de Papéis", href: "#services" },
-    { name: "Contato", href: "#contact" },
+    { name: "Início", href: "/", isRoute: true },
+    { name: "Produtos", href: "/produtos", isRoute: true },
+    { name: "Papéis Kraft", href: "#papers", isRoute: false },
+    { name: "Filme Plástico", href: "#plastic-film", isRoute: false },
+    { name: "Linha de Papéis", href: "#services", isRoute: false },
+    { name: "Contato", href: "#contact", isRoute: false },
   ];
 
   return (
@@ -52,15 +56,39 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                if (item.isRoute) {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                } else if (isHomePage) {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                    >
+                      {item.name}
+                    </a>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={`/${item.href}`}
+                      className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                }
+              })}
               <Button variant="hero" size="sm" asChild>
                 <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
                   Orçamento
@@ -85,16 +113,42 @@ const Header = () => {
           {isMenuOpen && (
             <nav className="md:hidden py-4 border-t animate-fade-in">
               <div className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 px-2 py-1"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navItems.map((item) => {
+                  if (item.isRoute) {
+                    return (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="text-foreground hover:text-primary transition-colors duration-300 px-2 py-1"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  } else if (isHomePage) {
+                    return (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-foreground hover:text-primary transition-colors duration-300 px-2 py-1"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <Link
+                        key={item.name}
+                        to={`/${item.href}`}
+                        className="text-foreground hover:text-primary transition-colors duration-300 px-2 py-1"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  }
+                })}
                 <Button variant="hero" size="sm" className="mt-4 w-fit" asChild>
                   <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
                     Orçamento
