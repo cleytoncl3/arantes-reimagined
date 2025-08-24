@@ -6,8 +6,8 @@ import kraftPaper from "@/assets/kraft-paper.jpg";
 import plasticFilm from "@/assets/plastic-film-cutting.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
-import automotiveMasking from "@/assets/automotive-masking-paper-new.jpg";
-import heroBackground from "@/assets/hero-background-new.jpg";
+import automotiveMasking from "@/assets/automotive-masking-corrected.jpg";
+import heroBackground from "@/assets/hero-background-improved.jpg";
 
 const Services = () => {
   const paperSpecs = [

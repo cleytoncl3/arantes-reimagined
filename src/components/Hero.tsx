@@ -1,7 +1,7 @@
 import { ArrowRight, Package, Truck, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroBackground from "@/assets/hero-background-new.jpg";
+import heroBackground from "@/assets/hero-background-improved.jpg";
 
 const Hero = () => {
   return (
