@@ -10,10 +10,10 @@ const Header = () => {
 
   const navItems = [
     { name: "Início", href: "/", isRoute: true },
-    { name: "Produtos", href: "/produtos", isRoute: true },
     { name: "Papéis Kraft", href: "#papers", isRoute: false },
-    { name: "Filme Plástico", href: "#plastic-film", isRoute: false },
     { name: "Linha de Papéis", href: "#services", isRoute: false },
+    { name: "Filme Plástico", href: "#plastic-film", isRoute: false },
+    { name: "Produtos", href: "/produtos", isRoute: true },
     { name: "Contato", href: "#contact", isRoute: false },
   ];
 
