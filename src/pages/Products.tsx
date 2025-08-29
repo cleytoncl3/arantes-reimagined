@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 
 // Import images
 import kraftPaper from "@/assets/kraft-paper.jpg";
-import customBags from "@/assets/custom-bags.jpg";
 import plotterPaper from "@/assets/plotter-paper-roll.jpg";
 import counterWrapping from "@/assets/counter-wrapping.jpg";
 import automotiveMasking from "/lovable-uploads/4808232a-407c-4f4b-8470-bb67fee34280.png";
@@ -21,33 +20,18 @@ const Products = () => {
       name: "Papel Kraft Puro",
       description: "Papel kraft de alta qualidade para embalagens e proteção",
       image: kraftPaper,
-      category: "Papel",
       features: [
         "100% kraft puro",
-        "Alta resistência",
+        "Alta resistência", 
         "Ecológico",
         "Diversas gramaturas"
       ]
     },
     {
       id: 2,
-      name: "Bolsas Personalizadas", 
-      description: "Bolsas kraft personalizadas com sua marca",
-      image: customBags,
-      category: "Bolsas",
-      features: [
-        "Impressão personalizada",
-        "Várias medidas",
-        "Kraft de qualidade",
-        "Design exclusivo"
-      ]
-    },
-    {
-      id: 3,
       name: "Papel para Plotter",
       description: "Bobinas de papel para plotter em diversas medidas",
       image: plotterPaper,
-      category: "Papel",
       features: [
         "Papel de alta qualidade",
         "Várias larguras",
@@ -56,24 +40,22 @@ const Products = () => {
       ]
     },
     {
-      id: 4,
+      id: 3,
       name: "Embrulho de Balcão",
       description: "Soluções práticas para embalagem no ponto de venda",
       image: counterWrapping,
-      category: "Papel",
       features: [
         "Papel resistente",
         "Fácil manuseio",
         "Econômico",
-        "Diversas cores"
+        "Sustentável"
       ]
     },
     {
-      id: 5,
+      id: 4,
       name: "Papel de Mascaramento Automotivo",
-      description: "Proteção profissional para pintura automotiva e muito mais.",
+      description: "Proteção profissional para pintura automotiva e muito mais",
       image: automotiveMasking,
-      category: "Especializado",
       features: [
         "Papel semi kraft",
         "Cor parda",
@@ -82,21 +64,18 @@ const Products = () => {
       ]
     },
     {
-      id: 6,
-      name: "Filme Plástico",
-      description: "Filme plástico para proteção e embalagem",
+      id: 5,
+      name: "Filme Plástico para Máquinas de Corte",
+      description: "Filme plástico especializado para máquinas de corte têxtil",
       image: plasticFilm,
-      category: "Plástico",
       features: [
-        "Material resistente",
-        "Transparente",
-        "Proteção contra umidade",
-        "Diversas espessuras"
+        "Material reciclado",
+        "Alta resistência",
+        "Proteção contra sujeiras",
+        "Resistente a rasgos"
       ]
     }
   ];
-
-  const categories = ["Todos", "Papel", "Bolsas", "Especializado", "Plástico"];
 
   return (
     <div className="min-h-screen">
@@ -124,19 +103,6 @@ const Products = () => {
       {/* Products Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-4 mb-12 justify-center">
-            {categories.map((category) => (
-              <Badge 
-                key={category}
-                variant={category === "Todos" ? "default" : "secondary"}
-                className="px-4 py-2 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                {category}
-              </Badge>
-            ))}
-          </div>
-
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
@@ -147,9 +113,6 @@ const Products = () => {
                     alt={product.name}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4">
-                    <Badge variant="secondary">{product.category}</Badge>
-                  </div>
                 </div>
                 
                 <CardHeader>
