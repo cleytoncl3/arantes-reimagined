@@ -152,7 +152,7 @@ const Header = () => {
                 <Button variant="hero" size="sm" className="mt-4 w-fit" asChild>
                   <a href="https://api.whatsapp.com/send?l=pt_br&phone=5521996062282" target="_blank" rel="noopener noreferrer">
                     Orçamento
-                  </a>
+                  </a>  
                 </Button>
               </div>
             </nav>
