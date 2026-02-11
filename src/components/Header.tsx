@@ -9,7 +9,7 @@ const Header = () => {
   const isHomePage = location.pathname === '/';
 
   const navItems = [
-    { name: "Início", href: "/", isRoute: true },
+    { name: "Início", href: "#home", isRoute: false },
     { name: "Papéis Kraft", href: "#papers", isRoute: false },
     { name: "Linha de Papéis", href: "#services", isRoute: false },
     { name: "Filme Plástico", href: "#plastic-film", isRoute: false },

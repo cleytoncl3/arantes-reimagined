@@ -26,7 +26,7 @@ const Contact = () => {
     // Create a hidden form to submit to FormSubmit.co
     const hiddenForm = document.createElement('form');
     hiddenForm.method = 'POST';
-    hiddenForm.action = 'https://formsubmit.co/cleytoncl2@gmail.com';
+    hiddenForm.action = 'https://formsubmit.co/arantespapeis@hotmail.com';
     hiddenForm.target = 'form-iframe'; // Submit to the hidden iframe
     hiddenForm.style.display = 'none';
     
