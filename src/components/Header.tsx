@@ -48,7 +48,7 @@ const Header = () => {
               />
               <div className="min-w-0 flex-1">
                 <h1 className="text-sm sm:text-lg lg:text-2xl font-bold text-primary leading-tight">
-                  ARANTES PAPÉIS & APAPÉIS
+                  ARANTES PAPÉIS
                 </h1>
                 <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">Embalagens e Soluções</p>
               </div>
